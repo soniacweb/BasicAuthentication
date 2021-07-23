@@ -1,5 +1,5 @@
-const { Sequelize, DataTypes, Model } = require("sequelize")
-const path = require("path")
+const { Sequelize, DataTypes, Model } = require("sequelize");
+const path = require("path");
 
 // creates new sequalize instance
 // dirname is the current directory your file is in
@@ -19,10 +19,17 @@ class User extends Model {} // we have a base class called Model and we want to 
 User.init({
     username: {
         type: DataTypes.STRING,
-        allowNull: false
-    }
+        allowNull: false,
+    },
+    passwordHash: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
 }, {
     sequelize,
-    modelName: "User"
+    modelName: "User",
 })
-module.exports = { sequalize };
+
+sequelize.sync() 
+
+module.exports = { sequelize, User };
