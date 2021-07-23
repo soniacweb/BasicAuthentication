@@ -5,9 +5,9 @@ const path = require("path");
 // dirname is the current directory your file is in
 // this sequalize object represents our cnnection to the database
 
-const seqelize = new Sequelize({
-    dialiect: 'sqlite',
-    storage: path.join(__dirname, "db.sqlite")
+const sequelize = new Sequelize({
+    dialect: 'sqlite',
+    storage: path.join(__dirname, "db.sqlite3")
 })
 
 // The ORM process: Obect Relational Mapping
@@ -16,6 +16,7 @@ const seqelize = new Sequelize({
 
 class User extends Model {} // we have a base class called Model and we want to inherit that for User 
 
+// user = subclass to model
 User.init({
     username: {
         type: DataTypes.STRING,
