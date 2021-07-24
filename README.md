@@ -5,8 +5,8 @@ https://multiverselearningproducts.github.io/swe/mod1/wk1/day5.html#javascript
 - Bcrypt
 - Sequelize 
 - Sqlite3
-- node 
-- express 
+- Node.js 
+- Express middleware
 - Postman
 
 Documents: 
